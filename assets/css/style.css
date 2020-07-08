@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+
+/* Ohne jedes einzeln zu importieren lassen sich die font-weights nicht zuweisen */
+
+/* 
+font-family: 'Lora', serif;
+font-family: 'Work Sans', sans-serif;
+Farbe: #2e2e2e / #fff / #000 / #1d2c2f
+*/
+
+*{
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+h1, label, #hero p, footer *{
+    font-family: 'Lora', serif;
+}
+nav, #story, #contact{
+    background: #2e2e2e;
+}
+nav, #story, #contact, footer, a{
+    color: #ffffff;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.5s;
+}
+a:hover{
+    opacity: 50%;    
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Hero */
+#hero{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 41.25fr 58.75fr;
+
+}
+#hero .text{
+    justify-content: center;
+}
+#hero h1{
+    margin-left: 10px;
+    font-size: 6.2rem;
+    font-weight: 600;
+    letter-spacing: 9px;
+}
+#hero p{
+    padding-top: 26px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+#hero .image{
+    background: url(../img/design-interior-1.jpg) center/cover no-repeat;
+}
+
+
+/* Navigation */
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+nav img{
+    height: 76px;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    margin: 0 90px 0 120px;
+    font-size: 1.41rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+
+/* Story */
+#story{
+    padding: 20.5vh 0 20.3vh;
+    display: grid;
+    grid-template-columns: 54.5fr 45.5fr;
+}
+#story .text{
+    padding-top: 9%;
+}
+#story .text h1{
+    font-size: 3.4rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+#story .text p{
+    padding: 15px 6.2% 0 6.5%;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.9px;
+    text-align: justify;
+}
+#story img{
+    width: 100%;
+}
+
+
+/* Featured */
+#featured{
+    padding: 28.5vh 0 21vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#featured h1{
+    font-size: 3.4rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+#featured>p{
+    padding: 15px;
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+    letter-spacing: 1px;
+    text-align: justify;
+    width: 44%;
+    margin: 0 auto;
+}
+#featured div{
+    padding: 9.7vh 5% 8.1vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
+    
+}
+#featured div figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#featured div figure p{
+    padding-top: 7px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.85rem;
+    letter-spacing: 1.4px;
+    text-align: center;
+    opacity: 50%;
+}
+#featured div figure img{
+    width: 100%;
+}
+
+
+/* Contact */
+#contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#contact div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#contact .text{
+    padding: 28.7vh 11% 21vh 13%;
+}
+#contact h1{
+    font-size: 3.4rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+#contact p{
+    padding-top: 4.1vh;
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+#contact .input{
+    padding: 24.7vh 26.5% 0 24.9%;
+}
+#contact .input label{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+#contact .input input:not([type="submit"]), #contact .input textarea{
+    width: 100%;
+    padding: 7px 4px 5px;
+    margin: 2px 0 36px;
+    font-size: 0.7rem;
+}
+#contact .input [type="submit"]{
+    margin-top: 19px;
+    padding: 10px 8px 7px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+
+/* Footer */
+footer{
+    background: #1d2c2f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 42px 45px;
+}
+footer *{
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+}
+footer #created{
+    margin-left: 95px;
+}
+footer div{
+    display: flex;
+}
+footer div a:not(:first-of-type){
+    margin-left: 45px;
+}
